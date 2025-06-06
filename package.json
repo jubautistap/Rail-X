@@ -1,0 +1,27 @@
+{
+  "name": "rail-x",
+  "version": "1.0.0",
+  "description": "Rail-X - революционная маркетплейс одежды в формате Telegram Mini App",
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd packages/frontend && npm run dev",
+    "dev:backend": "cd packages/backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd packages/frontend && npm run build",
+    "build:backend": "cd packages/backend && npm run build",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd packages/frontend && npm install",
+    "install:backend": "cd packages/backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["telegram", "mini-app", "marketplace", "fashion", "delivery"],
+  "author": "Rail-X Team",
+  "license": "MIT"
+} 
